@@ -5,8 +5,11 @@ import React, { useState } from 'react'
 import GitHubForm from '../components/GitHubForm';
 import Louder from '../components/Louder';
 import CardInformationUser from '../components/CardInformationUser';
+import { useHistory } from 'react-router';
 
 const Home = () => {
+
+    const history = useHistory();
 
     //State 
     const [nameUser, setNameUser] = useState("");
@@ -19,24 +22,39 @@ const Home = () => {
 
     };
 
-
     
     const handleSearchUsers = async e => {
         e.preventDefault();
         setUserInformation(null);
 
-        const API = `https://api.github.com/users/${nameUser}`;
+        
+
+        try {
+           const API = `https://api.github.com/users/${nameUser}`;
         const response = await fetch(API);
         const result = await response.json();
-        console.log( result);
-        setUserInformation(result);
+       
+
+        if (result.message !== 'Not Found') {
+            setUserInformation(result);
+            setLoader(false); 
+			return
+		}
+		throw new Error(result.message);
+
+    } catch (error) {
+        console.error(error);
         setLoader(false);
+        history.push('/*')
+            
+        }
 
     }
+ 
 
 
     return (
-        <div>
+        <div className=' min-h-screen w-full  bg-gradient-to-r from-gray-800 via-blue-900 to-blue-300 flex flex-col justify-center items-center gap-6 '>
 
            
            <GitHubForm handleNameUser={handleNameUser}
