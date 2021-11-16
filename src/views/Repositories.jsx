@@ -41,10 +41,10 @@ const Repositories = () => {
            
             <div className="text-center pb-12">
                 <h2 className="text-base font-bold text-indigo-600">
-                    GitHub Api
+                    GitHub App
                 </h2>
                 <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-white">
-                repositories          
+                Repositorios         
                 </h1>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -58,8 +58,8 @@ const Repositories = () => {
             <div key={user.id} className="w-full bg-gray-900 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
                 <div className="text-center">
                     <p className="text-xl text-white font-bold mb-2">{user?.full_name}</p>
-                    <p className="text-xl text-white font-bold mb-2">{user?.visibility}</p>
-             <a  href={user?.html_url} className="text-base text-gray-400 font-normal" >{user?.html_url}</a>  
+                    <p className="text-xl text-blue-600 font-bold mb-2 capitalize">{user?.visibility}</p>
+             <a  href={user?.html_url} className=" text-xs md:text-base text-gray-400 font-normal" >{user?.html_url}</a>  
                 </div>
             </div>
        
