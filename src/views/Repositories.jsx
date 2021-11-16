@@ -59,7 +59,7 @@ const Repositories = () => {
                 <div className="text-center">
                     <p className="text-xl text-white font-bold mb-2">{user?.full_name}</p>
                     <p className="text-xl text-white font-bold mb-2">{user?.visibility}</p>
-             <a target="_blank" href={user?.html_url} className="text-base text-gray-400 font-normal" >{user?.html_url}</a>  
+             <a  href={user?.html_url} className="text-base text-gray-400 font-normal" >{user?.html_url}</a>  
                 </div>
             </div>
        

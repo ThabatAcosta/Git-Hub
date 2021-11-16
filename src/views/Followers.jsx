@@ -60,7 +60,7 @@ const Followers = () => {
                 </div>
                 <div className="text-center">
                     <p className="text-xl text-white font-bold mb-2">{user?.login}</p>
-             <a target="_blank" href={user?.html_url} className="text-base text-gray-400 font-normal" >{user?.html_url}</a>  
+             <a  href={user?.html_url} className="text-base text-gray-400 font-normal" >{user?.html_url}</a>  
                 </div>
             </div>
        
