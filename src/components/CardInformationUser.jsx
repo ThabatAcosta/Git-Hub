@@ -30,21 +30,21 @@ const CardInformationUser = props => {
         
             <p className='space-x-2 text-xs md:text-base'> 
                <Link to={`/followers/${login}`}>
-               <span className='text-indigo-800 font-medium'>Seguidores:</span>
+               <span className=' text-blue-300 font-medium'>Seguidores:</span>
                </Link> 
-              <span className='text-indigo-900 font-medium'>{followers} </span> 
+              <span className='text-white font-medium'>{followers} </span> 
             </p> 
 
             <p className='space-x-2 text-xs md:text-base'> 
                <Link to={`/repositories/${login}`}> 
-                <span className='text-indigo-800 font-medium'> Repositorios:</span>
+                <span className='text-blue-300  font-medium'> Repositorios:</span>
                  </Link>  
-                 <span className='text-indigo-900 font-medium'>{public_repos} </span>
+                 <span className='text-white  font-medium'>{public_repos} </span>
                  
             </p> 
 
-             <p className='space-x-2 text-xs md:text-base'>  <span className='text-indigo-800 font-medium'>Seguidos</span>
-            <span className='text-indigo-900 font-medium'>{following} </span>
+             <p className='space-x-2 text-xs md:text-base'>  <span className='text-blue-300 font-medium'>Seguidos</span>
+            <span className='text-white  font-medium'>{following} </span>
             
             </p>
            </div> 
